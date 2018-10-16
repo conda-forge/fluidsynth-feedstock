@@ -12,7 +12,7 @@ source:
   sha256: da8878ff374d12392eecf87e96bad8711b8e76a154c25a571dd8614d1af80de8
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -20,6 +20,7 @@ requirements:
     - {{ compiler('c') }}
     - cmake
     - pkg-config
+    - alsa-lib  # [linux]
   host:
     - glib
     - libsndfile
