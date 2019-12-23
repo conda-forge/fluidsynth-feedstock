@@ -1,18 +1,18 @@
 # Using the name variable with the URL in line 13 is conviniet
 # when copying and pasting from another recipe, but not really needed.
 {% set name = "fluidsynth" %}
-{% set version = "v1.1.11" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: v{{ version }}
 
 source:
-  url: https://github.com/FluidSynth/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: da8878ff374d12392eecf87e96bad8711b8e76a154c25a571dd8614d1af80de8
+  url: https://github.com/FluidSynth/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: 526addc6d8445035840d3af7282d3ba89567df209d28e183da04a1a877da2da3
 
 build:
-  number: 1000
+  number: 0
   skip: true  # [win]
 
 requirements:
