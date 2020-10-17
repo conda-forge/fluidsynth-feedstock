@@ -24,7 +24,6 @@ requirements:
     - glib
     - libsndfile
   run:
-    - glib
     - libsndfile
 
 test:
