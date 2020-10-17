@@ -23,6 +23,7 @@ requirements:
   host:
     - glib
     - libsndfile
+    - readline
   run:
     - libsndfile
 
