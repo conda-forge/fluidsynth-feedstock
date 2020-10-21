@@ -12,5 +12,10 @@ glib:
 - 2.64.6
 macos_machine:
 - x86_64-apple-darwin13.4.0
+pin_run_as_build:
+  readline:
+    max_pin: x
+readline:
+- '8.0'
 target_platform:
 - osx-64
