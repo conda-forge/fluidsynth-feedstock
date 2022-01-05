@@ -23,6 +23,7 @@ requirements:
     - make
     - pkg-config
     - compilers
+    - alsa-lib  # [linux]
   host:
     - glib
     - libsndfile
