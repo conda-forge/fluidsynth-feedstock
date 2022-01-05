@@ -12,14 +12,17 @@ source:
   sha256: 83cb1dba04c632ede74f0c0717018b062c0e00b639722203b23f77a961afd390
 
 build:
-  number: 1001
+  number: 0
   skip: true  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - cmake
+    - make
     - pkg-config
+    - compilers
   host:
     - glib
     - libsndfile
