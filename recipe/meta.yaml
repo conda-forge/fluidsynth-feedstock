@@ -1,7 +1,7 @@
 # Using the name variable with the URL in line 13 is conviniet
 # when copying and pasting from another recipe, but not really needed.
 {% set name = "fluidsynth" %}
-{% set version = "2.2.4" %}
+{% set version = "2.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/FluidSynth/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 83cb1dba04c632ede74f0c0717018b062c0e00b639722203b23f77a961afd390
+  sha256: 9037e703617f91c4c36039a5059e0f624164799d856af715bcd8a23c07ba03b8
 
 build:
   number: 0
@@ -39,7 +39,7 @@ about:
   license: LGPL-2.1
   license_family: LGPL
   license_file: LICENSE.txt
-  summary: 'Real-time software synthesizer based on the SoundFont 2 specs'
+  summary: Real-time software synthesizer based on the SoundFont 2 specs
 
   description: |
     Real-time software synthesizer based on the SoundFont 2 specs.
