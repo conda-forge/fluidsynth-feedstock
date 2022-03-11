@@ -3,4 +3,7 @@ build_platform:
 test_on_native_only: true
 conda_forge_output_validation: true
 bot:
-   automerge: true
+  automerge: true
+github:
+  branch_name: main
+  tooling_branch_name: main
