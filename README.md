@@ -186,6 +186,3 @@ Feedstock Maintainers
 * [@ngam](https://github.com/ngam/)
 * [@stefan-balke](https://github.com/stefan-balke/)
 
-
-<!-- dummy commit to enable rerendering -->
-
