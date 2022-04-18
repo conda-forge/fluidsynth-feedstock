@@ -12,7 +12,7 @@ source:
   sha256: ca90fe675cacd9a7b442662783c4e7fa0e1fd638b28d64105a4e3fe0f618d20f
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -23,14 +23,19 @@ requirements:
     - make
     - pkg-config
     - compilers
-    - alsa-lib
+    - alsa-lib  # [linux]
+    - {{ cdt('alsa-lib') }}  # [linux]
+    - jack  # [linux]
+    - portaudio
   host:
     - glib
     - libsndfile
     - readline
   run:
     - libsndfile
-    - alsa-lib
+    - alsa-lib  # [linux]
+    - jack  # [linux]
+    - portaudio
 
 test:
   commands:
