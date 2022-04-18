@@ -23,12 +23,14 @@ requirements:
     - make
     - pkg-config
     - compilers
+    - alsa-lib
   host:
     - glib
     - libsndfile
     - readline
   run:
     - libsndfile
+    - alsa-lib
 
 test:
   commands:
