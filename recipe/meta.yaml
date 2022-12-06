@@ -29,8 +29,13 @@ requirements:
     - ninja
     - pkg-config
   host:
+    - alsa-lib    # [linux]
     - glib
+    - jack        # [linux]
     - libsndfile
+    - portaudio
+    - pulseaudio  # [linux]
+    - sdl2
     - readline
 
 test:
