@@ -1,12 +1,15 @@
 #!/bin/bash
+set -ex
 
 mkdir build
 cd build
 
-cmake ${CMAKE_ARGS} \
+cmake -G Ninja \
+    ${CMAKE_ARGS} \
     -Denable-framework=OFF \
     -DLIB_SUFFIX="" \
     -Denable-libsndfile=ON \
     ..
 
-make install
+cmake --build .
+cmake --install .
