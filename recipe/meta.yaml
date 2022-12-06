@@ -26,8 +26,6 @@ requirements:
     - glib
     - libsndfile
     - readline
-  run:
-    - libsndfile
 
 test:
   commands:
