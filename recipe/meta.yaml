@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/FluidSynth/fluidsynth/archive/v{{ version }}.tar.gz
   sha256: 7c29a5cb7a2755c8012d941d1335da7bda957bbb0a86b7c59215d26773bb51fe
+  patches:
+    - patches/0001-don-t-unset-required-environment-flags.patch
 
 build:
   number: 1
