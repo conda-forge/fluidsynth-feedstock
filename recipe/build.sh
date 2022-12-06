@@ -2,5 +2,11 @@
 
 mkdir build
 cd build
-cmake ${CMAKE_ARGS} .. -Denable-framework=OFF -DLIB_SUFFIX="" -Denable-libsndfile=ON -DCMAKE_INSTALL_PREFIX=$PREFIX -DCMAKE_PREFIX_PATH:PATH=$PREFIX
+
+cmake ${CMAKE_ARGS} \
+    -Denable-framework=OFF \
+    -DLIB_SUFFIX="" \
+    -Denable-libsndfile=ON \
+    ..
+
 make install
