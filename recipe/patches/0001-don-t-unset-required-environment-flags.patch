@@ -1,0 +1,32 @@
+From 0e9a68e20354a9b8a55433054f0d66a6e9ab02bc Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Wed, 7 Dec 2022 09:05:17 +1100
+Subject: [PATCH] don't unset required environment flags
+
+---
+ src/gentables/CMakeLists.txt | 10 ----------
+ 1 file changed, 10 deletions(-)
+
+diff --git a/src/gentables/CMakeLists.txt b/src/gentables/CMakeLists.txt
+index 638f299..1e8ba34 100644
+--- a/src/gentables/CMakeLists.txt
++++ b/src/gentables/CMakeLists.txt
+@@ -1,15 +1,5 @@
+ cmake_minimum_required(VERSION 3.1)
+ 
+-# remove $CC from the current environment and by that force cmake to look for a (working) C compiler,
+-# which hopefully will be the host compiler
+-unset(ENV{CC})
+-
+-# also unset $CFLAGS to avoid passing any cross compilation flags to the host compiler
+-unset(ENV{CFLAGS})
+-
+-# linker flags as well
+-unset(ENV{LDFLAGS})
+-
+ project (gentables C)
+ 
+ set ( CMAKE_BUILD_TYPE Debug )
+-- 
+2.38.1.windows.1
+

@@ -1,34 +1,42 @@
-# Using the name variable with the URL in line 13 is conviniet
-# when copying and pasting from another recipe, but not really needed.
-{% set name = "fluidsynth" %}
 {% set version = "2.2.8" %}
 
 package:
-  name: {{ name|lower }}
+  name: fluidsynth
   version: {{ version }}
 
 source:
-  url: https://github.com/FluidSynth/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://github.com/FluidSynth/fluidsynth/archive/v{{ version }}.tar.gz
   sha256: 7c29a5cb7a2755c8012d941d1335da7bda957bbb0a86b7c59215d26773bb51fe
+  patches:
+    # upstream uses a hack to ensure an executable built for the
+    # build process itself has the right (=host) CPU type;
+    # the hack unsets the CC variable, meaning it'll pick up the host
+    # compiler (on osx: xcode) rather than our own infrastructure;
+    # obviously we should do this properly also on osx-arm
+    - patches/0001-don-t-unset-required-environment-flags.patch  # [not (osx and arm64)]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
+  run_exports:
+    - {{ pin_subpackage("fluidsynth", max_pin="x.x") }}
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
-    - make
+    - ninja
     - pkg-config
-    - compilers
   host:
+    - alsa-lib    # [linux]
     - glib
+    - jack        # [linux]
     - libsndfile
+    - portaudio
+    - pulseaudio  # [linux]
+    - sdl2
     - readline
-  run:
-    - libsndfile
 
 test:
   commands:
@@ -50,3 +58,4 @@ extra:
   recipe-maintainers:
     - ngam
     - stefan-balke
+    - h-vetinari
