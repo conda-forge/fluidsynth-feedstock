@@ -1,4 +1,4 @@
-{% set version = "2.2.8" %}
+{% set version = "2.2.9" %}
 
 package:
   name: fluidsynth
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/FluidSynth/fluidsynth/archive/v{{ version }}.tar.gz
-  sha256: 7c29a5cb7a2755c8012d941d1335da7bda957bbb0a86b7c59215d26773bb51fe
+  sha256: bc62494ec2554fdcfc01512a2580f12fc1e1b01ce37a18b370dd7902af7a8159
   patches:
     # upstream uses a hack to ensure an executable built for the
     # build process itself has the right (=host) CPU type;
@@ -16,7 +16,7 @@ source:
     - patches/0001-don-t-unset-required-environment-flags.patch  # [not (osx and arm64)]
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("fluidsynth", max_pin="x.x") }}
