@@ -17,7 +17,7 @@ cxx_compiler_version:
 glib:
 - '2'
 libsndfile:
-- '1.1'
+- '1.2'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 readline:
