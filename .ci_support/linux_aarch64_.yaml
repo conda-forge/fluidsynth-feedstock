@@ -29,7 +29,7 @@ glib:
 libsndfile:
 - '1.2'
 pulseaudio:
-- '17'
+- '17.0'
 readline:
 - '8'
 sdl2:
