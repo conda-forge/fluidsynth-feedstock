@@ -1,4 +1,4 @@
-{% set version = "2.3.5" %}
+{% set version = "2.3.6" %}
 
 package:
   name: fluidsynth
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/FluidSynth/fluidsynth/archive/v{{ version }}.tar.gz
-  sha256: f89e8e983ecfb4a5b4f5d8c2b9157ed18d15ed2e36246fa782f18abaea550e0d
+  sha256: 3340d73286b28fe6e5150fbe12648d4640e86c64c228878b572773bd08cac531
   patches:
     # upstream uses a hack to ensure an executable built for the
     # build process itself has the right (=host) CPU type;
@@ -24,6 +24,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake
     - ninja
