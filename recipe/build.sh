@@ -9,6 +9,7 @@ cmake -G Ninja \
     -Denable-framework=OFF \
     -DLIB_SUFFIX="" \
     -Denable-libsndfile=ON \
+    -DFLUID_HOST_COMPILER=${CC_FOR_BUILD} \
     ..
 
 cmake --build .
