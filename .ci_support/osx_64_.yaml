@@ -24,6 +24,8 @@ libsndfile:
 - '1.2'
 macos_machine:
 - x86_64-apple-darwin13.4.0
+portaudio:
+- '19.7'
 readline:
 - '8'
 sdl2:

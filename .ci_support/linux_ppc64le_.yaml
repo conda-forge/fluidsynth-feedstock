@@ -24,6 +24,8 @@ glib:
 - '2'
 libsndfile:
 - '1.2'
+portaudio:
+- '19.7'
 pulseaudio:
 - '17.0'
 readline:
