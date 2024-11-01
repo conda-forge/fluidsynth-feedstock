@@ -9,7 +9,7 @@ source:
   sha256: fd4d216a3030abc56a339985ab0506328660cd77b2d71dd98c240c58c03d8f7f
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("fluidsynth", max_pin="x.x") }}
