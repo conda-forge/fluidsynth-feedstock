@@ -1,4 +1,4 @@
-{% set version = "2.4.0" %}
+{% set version = "2.4.1" %}
 
 package:
   name: fluidsynth
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/FluidSynth/fluidsynth/archive/v{{ version }}.tar.gz
-  sha256: fd4d216a3030abc56a339985ab0506328660cd77b2d71dd98c240c58c03d8f7f
+  sha256: d1e64155ac902116ed3d4dea512719d8c04ab3877db2e8fb160284379f570a2f
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("fluidsynth", max_pin="x.x") }}
