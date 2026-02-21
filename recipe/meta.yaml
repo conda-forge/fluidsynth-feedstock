@@ -1,4 +1,4 @@
-{% set version = "2.5.2" %}
+{% set version = "2.5.3" %}
 
 package:
   name: fluidsynth
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/FluidSynth/fluidsynth/archive/v{{ version }}.tar.gz
-  sha256: 1dcb13308b3aa383db658c60a7b63d73d0ff4601ccee589582ba7a816475410e
+  sha256: 6f247edfb4b91b927efc68c8884cec2ec345c8007afe6b59558cc52a67ef2517
 
 build:
   number: 0
