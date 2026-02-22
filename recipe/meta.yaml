@@ -24,9 +24,12 @@ requirements:
     - pkg-config
   host:
     - alsa-lib    # [linux]
+    - dbus        # [linux]
     - glib
     - jack        # [linux]
+    - libgomp     # [linux]
     - libsndfile
+    - llvm-openmp  # [osx]
     - portaudio
     - pulseaudio  # [linux]
     - sdl2
